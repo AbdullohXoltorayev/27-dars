@@ -4,60 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
   <body>
     <!-- Navbar -->
     <nav>
-      <section class="advert">
-        <span>Get your dream house in a week.</span>
-        <div class="exit">
+      <section
+        class="advert flex space-between items-center pl-16 pr-16 fixed top-0 w-full"
+      >
+        <span class="grow text-center font-normal text-sm leading-8 py-2"
+          >Get your dream house in a week.</span
+        >
+        <div class="cursor-pointer">
           <img src="./images/icons/exit.svg" alt="" />
         </div>
       </section>
 
-      <section class="navbar">
-        <div class="container">
-          <div class="nav-left">
+      <section class="navbar py-4 fixed top-12 w-full px-12">
+        <div class="flex justify-between items-center h-[60px]">
+          <div class="cursor-pointer">
             <img src="./images/icons/main-logo.svg" alt="Top Logo" />
           </div>
 
-          <div class="nav-right">
-            <ul>
+          <div class="flex">
+            <ul class="flex gap-6 items-center pr-4 text-center">
               <li>
-                <a href="#Home">Home</a>
+                <a
+                  class="inline-block text-base font-normal font-normal leading-10 flex gap-4"
+                  href="#Home"
+                  >Home</a
+                >
               </li>
 
               <li>
-                <a href="#Properties"
+                <a
+                  class="inline-block text-base font-normal font-normal leading-10 flex gap-4"
+                  href="#Properties"
                   >Properties
                   <select name="" id=""></select>
                 </a>
               </li>
 
               <li>
-                <a href="#About">About</a>
+                <a
+                  class="inline-block text-base font-normal font-normal leading-10 flex gap-4"
+                  href="#About"
+                  >About</a
+                >
               </li>
 
               <li>
-                <a href="#Contact">Contact</a>
+                <a
+                  class="inline-block text-base font-normal font-normal leading-10 flex gap-4"
+                  href="#Contact"
+                  >Contact</a
+                >
               </li>
 
               <li>
-                <a href="#">
+                <a
+                  class="inline-block text-base font-normal font-normal leading-10 flex gap-4"
+                  href="#"
+                >
                   <img src="./images/icons/search.svg" alt="" />
                   Search</a
                 >
               </li>
             </ul>
 
-            <div class="cart">
-              <div class="cart-img">
+            <div
+              class="cart flex gap-2.5 items-center justify-content py-2.4 rounded-lg mr-4 px-5"
+            >
+              <div>
                 <img src="./images/icons/cart.svg" alt="" />
               </div>
-              <p>Cart</p>
+              <p class="text-base">Cart</p>
             </div>
-            <button class="btn">Find a property</button>
+            <button class="btn text-base">Find a property</button>
           </div>
         </div>
       </section>
@@ -65,87 +89,147 @@
 
     <!-- Header -->
 
-    <header id="Home">
+    <header id="Home" class="flex mt-[122px]">
       <section class="head-left">
-        <div class="hero-sticker">
+        <div>
           <img src="./images/vectors/hero-vector1.png" alt="" />
         </div>
 
-        <div class="hero-caption">
-          <span>Find your dream place</span>
-          <h1>Find house for your family in minutes</h1>
-          <p>
+        <div class="hero-caption flex flex-col mx-auto gap-y-[21px]">
+          <span
+            class="px-2 py-0 w-[171px] rounded-[2rem] text-main-color font-normal text-[14px] leading-[2.1rem]"
+            >Find your dream place</span
+          >
+          <h1 class="font-roboto text-[56px] font-normal leading-[67.2px]">
+            Find house for your family in minutes
+          </h1>
+          <p
+            class="font-roboto text-[20px] font-normal leading-[30px] w-[500px]"
+          >
             Aenean sodales mauris quis tellus facilisis, vel mattis magna.
             Interdum curabitur eget aliquam elit in mauris purus.
           </p>
-          <div class="search-box">
-            <div class="search">
-              <img src="./images/icons/search.svg" alt="" />
-              <input type="search" placeholder="Search" />
+          <div class="gap-4 flex">
+            <div
+              class="flex gap-4 items-center justify-start shadow-[0_2px_0_#00000014] rounded-[10px] px-[16px] py-[12px] flex-grow"
+            >
+              <img
+                class="w-[24px] h-[24px]"
+                src="./images/icons/search.svg"
+                alt=""
+              />
+              <input
+                class="outline-none border-none bg-transparent"
+                type="search"
+                placeholder="Search"
+              />
             </div>
-            <button class="btn">Find a property</button>
+            <button
+              class="btn font-roboto text-[20px] font-normal leading-[30px]"
+            >
+              Find a property
+            </button>
           </div>
         </div>
-
-        <!-- <div class="hero-sticker">
-          <img src="./images/vectors/her0-vector2.png" alt="" />
-        </div> -->
       </section>
-      <section class="head-right">
-        <img src="./images/hero-img.png" alt="" />
+      <section class="w-[50%]">
+        <img src="./images/hero-img.png" class="w-[100%]" />
       </section>
     </header>
 
     <!-- Partners -->
 
-    <section class="partners container">
-      <p>
+    <section class="flex justify-between pt-[70px] mx-[80px]">
+      <p class="font-roboto text-[18px] font-normal leading-[27px]">
         As seen on the world's best <br />
         magazines and media
       </p>
-      <div class="partner-logos">
-        <img src="./images/partners/partner-1.png" alt="" />
-        <img src="./images/partners/partner-2.png" alt="" />
-        <img src="./images/partners/partner-3.png" alt="" />
-        <img src="./images/partners/partner-4.png" alt="" />
-        <img src="./images/partners/partner-5.png" alt="" />
+      <div class="gap-[30px] flex items-center">
+        <img
+          class="w-[120px] h-[28px]"
+          src="./images/partners/partner-1.png"
+          alt=""
+        />
+        <img
+          class="w-[120px] h-[28px]"
+          src="./images/partners/partner-2.png"
+          alt=""
+        />
+        <img
+          class="w-[120px] h-[28px]"
+          src="./images/partners/partner-3.png"
+          alt=""
+        />
+        <img
+          class="w-[120px] h-[28px]"
+          src="./images/partners/partner-4.png"
+          alt=""
+        />
+        <img
+          class="w-[120px] h-[28px]"
+          src="./images/partners/partner-5.png"
+          alt=""
+        />
       </div>
     </section>
 
     <!-- How it works -->
-    <section id="About" class="how container">
+    <section
+      id="About"
+      class="justify-center items-center mx-[80px] flex gap-[64px] mt-[130px] flex-col"
+    >
       <div class="title">
-        <h2>How it works</h2>
-        <p>
+        <h2 class="font-roboto text-[48px] font-extrabold leading-[57.6px]">
+          How it works
+        </h2>
+        <p class="text-[18px] leading-[27px] text-center">
           Nunc laoreet consequat nunc at consequat. Praesent aliquam mi id
           efficitur pellentesque. <br />
           Maecenas varius felis felis.
         </p>
       </div>
 
-      <div class="how-items">
-        <div class="how-item">
+      <div class="flex gap-[32px]">
+        <div
+          class="how-item flex flex-col gap-[20px] justify-center items-center px-[30px] py-[50px] rounded-[16px]"
+        >
           <img src="./images/how/house.png" alt="" />
-          <h3>Find property</h3>
-          <p>
+          <h3 class="font-roboto text-[24px] font-bold leading-[33.6px]">
+            Find property
+          </h3>
+          <p
+            class="font-roboto text-[16px] font-normal leading-[24px] text-center"
+          >
             Odales mauris quis tellus facilisis, vel mattis magna interdum.
             Curabitur eget aliquam elit. In mauris purus, auctor a eleifend non.
           </p>
         </div>
 
-        <div class="how-item">
+        <div
+          class="how-item flex flex-col gap-[20px] justify-center items-center px-[30px] py-[50px] rounded-[16px]"
+        >
           <img src="./images/how/deal.png" alt="" />
-          <h3>Make a deal</h3>
-          <p>
+          <h3 class="font-roboto text-[24px] font-bold leading-[33.6px]">
+            Make a deal
+          </h3>
+          <p
+            class="font-roboto text-[16px] font-normal leading-[24px] text-center"
+          >
             Pellentesque suscipit mauris. Nam dictum, erat a volutpat varius,
             urna nisi sollicitudin orci, sagittis facilisis odio tortor ac mi.
           </p>
         </div>
 
-        <div class="how-item">
+        <div
+          class="how-item flex flex-col gap-[20px] justify-center items-center px-[30px] py-[50px] rounded-[16px]"
+        >
           <img src="./images/how/key.png" alt="" />
-          <h3>Get your keys</h3>
-          <p>
+          <h3 class="font-roboto text-[24px] font-bold leading-[33.6px]">
+            Get your keys
+          </h3>
+          <p
+            class="font-roboto text-[16px] font-normal leading-[24px] text-center"
+          >
             Nulla vel bibendum purus. Etiam tempus quam vel pulvinar rutrum.
             Duis semper, metus vitae fermentum consequat.
           </p>
@@ -154,17 +238,35 @@
     </section>
 
     <!-- Comfort family-->
-    <section id="Properties" class="comfort container">
-      <div class="comfort-left">
-        <span>Comfort first</span>
-        <h4>The best houses for family comfort</h4>
-        <p>
+    <section
+      id="Properties"
+      class="mx-[80px] flex gap-[80px] mt-[13rem] justify-between items-center"
+    >
+      <div class="comfort-left flex flex-col gap-[25px] w-[50%]">
+        <span
+          class="w-[110px] px-[12px] py-[4px] rounded-[20px] font-normal text-[14px] leading-[21px]"
+          >Comfort first</span
+        >
+        <h4
+          class="font-roboto text-[48px] font-extrabold leading-[57.6px] text-left w-[450px]"
+        >
+          The best houses for family comfort
+        </h4>
+        <p
+          class="font-roboto text-[18px] font-normal leading-[27px] text-left w-[450px]"
+        >
           Ectus ipsum faucibus justo, et semper quam nisl in nibh. Proin
           sollicitudin, lorem non posuere blandit.
         </p>
-        <div class="action">
-          <button class="btn btn2">Explore properties</button>
-          <button class="btn btn2">
+        <div class="action flex gap-[24px]">
+          <button
+            class="btn btn2 font-roboto text-[16px] font-normal leading-[24px] text-center"
+          >
+            Explore properties
+          </button>
+          <button
+            class="btn btn2 font-roboto text-[16px] font-normal leading-[24px] text-center flex items-center gap-4"
+          >
             Contact agent <img src="./images/icons/right.svg" alt="" />
           </button>
         </div>
@@ -175,40 +277,53 @@
     </section>
 
     <!-- Fast -->
-    <section class="fast container">
-      <div class="fast-left">
-        <img src="./images/fast.png" alt="" />
+    <section
+      class="flex gap-[80px] mt-[130px] justify-between items-center mb-[50px] mx-[80px]"
+    >
+      <div class="w-[50%]">
+        <img src="./images/fast.png" class="w-[100%]" />
       </div>
-      <div class="fast-right">
-        <span>Quick and easy</span>
-        <h4>Fast forward process</h4>
-        <p>
+      <div class="fast-right flex-col gap-25px w-[50%]">
+        <span
+          class="w-[130px] px-[12px] py-[4px] rounded-[20px] font-normal text-[14px] leading-[21px]"
+          >Quick and easy</span
+        >
+        <h4
+          class="font-roboto text-[48px] font-extrabold leading-[57.6px] text-left mt-[21px]"
+        >
+          Fast forward process
+        </h4>
+        <p class="font-roboto text-[18px] font-normal leading-[27px] text-left mt-[29px]">
           Ut vitae nisi eu nisi maximus condimentum ac id purus. Duis sit amet
           mi arcu praesent nec felis nisl.
         </p>
 
-        <div class="fast-sections">
-          <div class="fast-section">
-            <img src="./images/icons/money.png" alt="" />
-            <h3>Affordable prices</h3>
-            <p>
+        <div class="flex gap-[24px] mb-[24px] mt-[29px] ">
+          <div class=" flex flex-col gap-[16px]">
+            <img src="./images/icons/money.png" class="w-[48px] h-[48px]" />
+            <h3 class="text-[20px] leading-[23px]">Affordable prices</h3>
+            <p
+              class="font-roboto text-[16px] font-normal leading-[24px] text-left w-[281px]"
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros.
             </p>
           </div>
-          <div class="fast-section">
-            <img src="./images/icons/paper.png" alt="" />
-            <h3>Less paper work</h3>
-            <p>
+          <div class="flex flex-col gap-[16px] mb-[24px]">
+            <img src="./images/icons/paper.png" class="w-[48px] h-[48px]" />
+            <h3 class="text-[20px] leading-[23px]">Less paper work</h3>
+            <p
+              class="font-roboto text-[16px] font-normal leading-[24px] text-left w-[281px]"
+            >
               Curabitur porta luctus semper donec eget lobortis leo ac finibus
               nisi.
             </p>
           </div>
         </div>
 
-        <div class="action">
-          <button class="btn btn2">Explore properties</button>
-          <button class="btn btn2">
+        <div class="flex gap-[24px]">
+          <button class="btn btn2 font-roboto text-[16px] font-normal leading-[24px] text-center ">Explore properties</button>
+          <button class="btn btn2 font-roboto text-[16px] font-normal leading-[24px] text-center flex items-center gap-4">
             Contact agent <img src="./images/icons/right.svg" alt="" />
           </button>
         </div>
